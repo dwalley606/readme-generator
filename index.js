@@ -6,56 +6,97 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'What is the name of your project?'
     },
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Enter a description of your project'
     },
     {
         type: 'input',
-        name: 'Table of Contents',
-        message: 'Enter a table of contents for your project'
-    },
-    {
-        type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Describe how to install your project'
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Describe how to use your project'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'License',
-        message: 'Enter the license for your project'
+        message: 'Enter the license for your project',
+        choices: ['MIT', 'Apache', 'GPL', 'Mozilla', 'BSD']
     },
     {
         type: 'input',
-        name: 'Contributing',
+        name: 'contributing',
         message: 'Enter any other contributors to your project'
     },
     {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'Describe any tests you ran on the project'
     },
     {
         type: 'input',
-        name: 'Questions',
+        name: 'questions',
         message: 'Enter your Github username'
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(README.md, data) {}
+function writeToFile(README, data) {
+    const content = `
+# ${data.title}
+
+## Description
+${data.description}
+
+## Table of Contents
+
+1. Installation
+2. Usage
+3. License
+4. Contributing
+5. Tests
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## License 
+${data.license}
+
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## Questions
+GitHub: ${data.questions}
+`;
+
+    fs.writeFile(README, content, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('README.md file has been successfully created!');
+        }
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        writeToFile('README.md', answers);
+    });
+}
 
 // Function call to initialize app
 init();
