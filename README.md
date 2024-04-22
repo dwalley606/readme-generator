@@ -1,10 +1,10 @@
 
 # Readme Generator
 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-An app used to create a professional readme for any project.
+An app that dynimically renders a professional readme based on user input collected with inquirer.
 
 ## Table of Contents
 
@@ -15,14 +15,14 @@ An app used to create a professional readme for any project.
 5. [Tests](#tests)
 
 ## Installation
-Clone the app files, type "npm install" into your terminal to install dependencies, then type node index.js in the terminal.
+First, you must have node installed on your device. Next, clone the files to your local repository, and use npm install in your terminal to install the dependencies. Finally, start the app by typing "node index.js" into your terminal and respond  to the inquiries.
 
 ## Usage
-When ran, the app will query the user for answers about a project, and then generate a professional readme.
+This app can be used to create a custom readme for any project. Simply answer all of the prompts to generate thefile 
 
 ## License
-    undefined
-    [License Link]()
+    This project is covered under the MIT license. For more information, click the link below.
+    [License Link](https://opensource.org/licenses/MIT)
 
 ## Contributing
 None
@@ -31,6 +31,7 @@ None
 None
 
 ## Questions
-https://github.com/dwalley606
-Send any questions to dwalley606@gmail.com
+Have questions about this project? Please see my Github profile at https://github.com/dwalley606.
+
+You can also send me an email at dwalley606@gmail.com.
 

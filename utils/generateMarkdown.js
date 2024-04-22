@@ -42,7 +42,7 @@ function renderLicenseSection(license) {
   } else {
     const licenseLink = renderLicenseLink(license); // Call renderLicenseLink to get the license link
     return `## License
-    ${license}
+    This project is covered under the ${license} license. For more information, click the link below.
     [License Link](${licenseLink})`;
   }
 }
@@ -82,8 +82,9 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-https://github.com/${data.questions}
-Send any questions to ${data.email}
+Have questions about this project? Please see my Github profile at https://github.com/${data.questions}.
+
+You can also send me an email at ${data.email}.
 
 `;
 }
